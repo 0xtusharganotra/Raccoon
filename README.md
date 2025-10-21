@@ -3,6 +3,8 @@
 Raccoon is a real-time chat application featuring a modern and responsive user interface. It allows users to sign in, join chat rooms, and
 communicate instantly with others.
 
+![alt text](image.png)
+
 ✨ Features
 
 - Real-Time Messaging: Instant message delivery using WebSockets.
