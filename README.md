@@ -1,73 +1,64 @@
-# React + TypeScript + Vite
+#Raccoon 🦝 - Real-Time Chat Application
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Raccoon is a real-time chat application featuring a modern and responsive user interface. It allows users to sign in, join chat rooms, and
+communicate instantly with others.
 
-Currently, two official plugins are available:
+✨ Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- Real-Time Messaging: Instant message delivery using WebSockets.
+- User Authentication: Secure sign-in and sign-out functionality powered by Auth0.
+- Modern UI: A clean and intuitive interface built with React, TypeScript, and shadcn/ui.
+- Component-Based Architecture: A well-structured frontend with reusable React components.
+- Scalable Backend: A lightweight and efficient backend powered by Node.js, Express, and ws.
 
-## React Compiler
+🛠️ Technologies Used
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+Frontend (Client)
 
-## Expanding the ESLint configuration
+- Framework: React
+- Language: TypeScript
+- Build Tool: Vite
+- Styling: Tailwind CSS & shadcn/ui
+- Routing: React Router
+- Authentication: Auth0
+- Linting: ESLint
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+Backend (Server)
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+- Framework: Express.js
+- Language: TypeScript
+- Real-Time Communication: WebSockets (ws)
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+🚀 Getting Started
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+Prerequisites
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+- Node.js (v18 or higher recommended)
+- npm (or your favorite package manager)
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+Installation & Setup
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+1.  Clone the repository:
+    1 git clone <your-repository-url>
+    2 cd Real\ Time\ Chat\ Application\(racoon\)
+
+2.  Set up the server:
+
+1 cd server
+2 npm install
+
+3.  Set up the client:
+    1 cd ../client
+    2 npm install
+
+Running the Application
+
+1.  Start the backend server:
+    From the server directory, run:
+    1 npm run dev
+    The server will start on the configured port (e.g., http://localhost:8080).
+
+2.  Start the frontend client:
+    From the client directory, run:
+    1 npm run dev
+    The client will be available at http://localhost:5173.

@@ -1,5 +1,5 @@
-import Chatroom from "./Components/Chatroom";
 import Sidebar from "./Components/Sidebar";
+import Welcome from "./Components/Welcome";
 
 function App() {
   return (
@@ -15,7 +15,7 @@ function App() {
       </div>
       <div className="flex max-w-[100vw]  h-[calc(100vh-30px)] m-auto">
         <Sidebar />
-        <Chatroom />
+        <Welcome />
       </div>
     </div>
   );
