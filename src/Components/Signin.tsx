@@ -1,10 +1,6 @@
-import { useNavigate } from "react-router-dom";
+import { useAuth0 } from "@auth0/auth0-react";
 const Signin = () => {
-  const navigate = useNavigate();
-
-  function navigatetohome() {
-    navigate("/app");
-  }
+  const { loginWithRedirect } = useAuth0();
 
   return (
     <div>
@@ -22,7 +18,7 @@ const Signin = () => {
 
             <div className="w-full flex justify-center">
               <button
-                onClick={navigatetohome}
+                onClick={() => loginWithRedirect()}
                 className="flex items-center mt-7 bg-white border border-gray-300 rounded-lg shadow-md px-6 py-2 text-sm font-medium text-gray-800 hover:bg-gray-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-500"
               >
                 <svg
